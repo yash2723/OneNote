@@ -144,8 +144,8 @@
     flex-direction: column;
     background-color: aliceblue;
     border: 1px solid slateblue;
-    width: 400px;
-    height: 300px;
+    width: 300px;
+    height: 200px;
     border-radius: 10px;
     margin: 30px;
 }
@@ -153,8 +153,8 @@
 .NoteContainer .note textarea {
     background-color: aliceblue;
     padding: 20px;
-    width: 360px;
-    height: 260px;
+    width: 260px;
+    height: 200px;
     font-size: 20px;
     border: none;
     resize: none;
