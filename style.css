@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Nunito', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+
+.navbar {
+    background-color: #feefc3;
+    padding: 15px 40px;
+    z-index: 0;
+}
+
+.navbar .logo a {
+    font-size: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+}
+
+.addNoteBtn {
+    display: flex;
+    float: right;
+    width: fit-content;
+    align-items: center;
+    font-size: 20px;
+    margin: 50px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.addBtn {
+    position: relative;
+    padding: 0px 10px;
+}
+
+.addBtn::before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 55px;
+    z-index: -99;
+    background-color: #f1c40f;
+    transition: width 1s;
+    border-radius: 90px;
+}
+
+.addNoteBtn:hover .addBtn::before {
+    width: 100%;
+}
+
+.addNoteBtn i {
+    margin-right: 5px;
+    padding: 15px;
+    padding-left: 26px;
+    text-align: center;
+}
+
+
+.inputSection {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(86, 140, 232, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.inputSection .inputContainer {
+    z-index: 9999;
+    opacity: 1 !important;
+    background: white !important;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    transition: all 1s;
+    margin: auto;
+}
+
+@keyframes animationForInputContainer {
+    0% {
+        transform: scale(1.04);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.inputSection .inputContainer .close-btn {
+    margin-top: 30px;
+    margin-right: 50px;
+    font-size: 30px;
+    text-align: right;
+}
+
+.inputSection .inputContainer .close-btn i:hover {
+    cursor: pointer;
+    color: red;
+}
+
+.inputSection .inputContainer textarea {
+    margin: 30px 50px;
+    outline: none;
+    font-size: 20px;
+    padding: 20px;
+    resize: none;
+    background-color: aliceblue;
+    box-shadow: 0px 0px 16px 1px rgb(69, 125, 216);
+    border: none;
+    border-radius: 15px;
+}
+
+.inputSection .inputContainer .save-btn {
+    margin: auto;
+    margin-bottom: 30px;
+    cursor: pointer;
+    padding: 5px 20px;
+    font-weight: 700;
+    font-size: 20px;
+    background-color: #f1c40f;
+    border-radius: 10px;
+}
+
+.NoteContainer {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 200px;
+    padding: 0px 50px;
+}
+
+.NoteContainer .note {
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    border: 1px solid slateblue;
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    margin: 30px;
+}
+
+.NoteContainer .note textarea {
+    background-color: aliceblue;
+    padding: 20px;
+    width: 360px;
+    height: 260px;
+    font-size: 20px;
+    border: none;
+    resize: none;
+    outline: none;
+}
+
+.NoteContainer .note .noteBtn {
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid slateblue;
+    padding: 15px 10px;
+}
+
+.NoteContainer .note .noteEditBtn {
+    margin-right: 15px;
+    cursor: pointer;
+    font-size: 22px;
+    color: green;
+    padding: 10px 15px;
+}
+
+.NoteContainer .note .noteEditBtn:hover {
+    background-color: green;
+    color: white;
+    border-radius: 100%;
+}
+
+.NoteContainer .note .noteDeleteBtn {
+    margin-right: 15px;
+    cursor: pointer;
+    font-size: 22px;
+    color: red;
+    padding: 10px 15px;
+}
+
+.NoteContainer .note .noteDeleteBtn:hover {
+    background-color: red;
+    color: white;
+    border-radius: 100%;
+}
